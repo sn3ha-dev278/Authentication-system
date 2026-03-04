@@ -119,8 +119,7 @@ Rate limiting was also tested by repeatedly sending login requests. After exceed
 
 ## Notes
 
-This project was built as a learning exercise while studying web application security. The focus was on understanding how authentication systems work and how common vulnerabilities can be mitigated at the application level.
-
+The focus was on understanding how authentication systems work and how common vulnerabilities can be mitigated at the application level.
 While the system includes certain security controls, it is still a simplified example and not intended for production use.
 
 ---
