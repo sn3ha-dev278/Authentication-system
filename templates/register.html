@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register — AuthApp</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+
+    <div class="brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 20 20" fill="none" stroke="#0a0a0a" stroke-width="2.5">
+          <rect x="3" y="3" width="14" height="14" rx="1"/>
+          <path d="M7 10h6M10 7v6"/>
+        </svg>
+      </div>
+      <span class="brand-name">AuthApp</span>
+    </div>
+
+    <h1 class="page-title">Create<br>account.</h1>
+    <p class="page-sub">// join in seconds</p>
+
+    <form method="POST" action="/register">
+      {{ form.hidden_tag() }}
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        {{ form.username(id="username") }}
+        {% for err in form.username.errors %}
+          <div class="error-msg">✕ {{ err }}</div>
+        {% endfor %}
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        {{ form.password(id="password") }}
+        {% for err in form.password.errors %}
+          <div class="error-msg">✕ {{ err }}</div>
+        {% endfor %}
+      </div>
+
+      <button type="submit" class="btn">Create Account</button>
+    </form>
+
+    <div class="switch-link">
+      Already have an account? <a href="/login">Sign in</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="corner-tag">AUTHAPP // REGISTER</div>
+
+</body>
+</html>

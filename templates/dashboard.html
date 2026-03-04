@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard — AuthApp</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container" style="max-width:480px;">
+  <div class="card">
+
+    <div class="dash-header">
+      <div class="brand" style="margin-bottom:0;">
+        <div class="brand-icon">
+          <svg viewBox="0 0 20 20" fill="none" stroke="#0a0a0a" stroke-width="2.5">
+            <rect x="3" y="3" width="14" height="14" rx="1"/>
+            <path d="M7 10h6M10 7v6"/>
+          </svg>
+        </div>
+        <span class="brand-name">AuthApp</span>
+      </div>
+      <div class="badge">● Active</div>
+    </div>
+
+    <div class="dash-welcome">Logged in as</div>
+    <div class="dash-name"><span>{{ current_user.username }}</span></div>
+
+    <hr class="divider">
+
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-label">User ID</div>
+        <div class="stat-value">#{{ current_user.id }}</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Status</div>
+        <div class="stat-value" style="font-size:14px; padding-top:4px;">Verified</div>
+      </div>
+    </div>
+
+    <p style="font-size:12px; color: var(--muted); font-family:'Space Mono',monospace; line-height:1.7; margin-bottom:24px;">
+      You're authenticated and inside the protected area.<br>
+      Build your app features from here.
+    </p>
+
+    <a href="/logout" class="logout-btn">Sign Out →</a>
+
+  </div>
+</div>
+
+<div class="corner-tag">AUTHAPP // DASHBOARD</div>
+
+</body>
+</html>
