@@ -1,4 +1,4 @@
-#Authentication System (Flask)
+# Authentication System (Flask)
 
 This project is a simple authentication system built with Flask that focuses on implementing basic security controls commonly used in real-world web applications. The goal of this project was to understand how authentication mechanisms work and how common attacks against login systems can be mitigated.
 
